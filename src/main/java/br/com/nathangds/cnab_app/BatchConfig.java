@@ -45,6 +45,7 @@ public class BatchConfig {
                 .<CnabTransaction, Transaction>chunk(100, platformTransactionManager)
                 .reader(reader)
                 .processor(processor)
+                .writer(write)
                 .build();
     }
 
